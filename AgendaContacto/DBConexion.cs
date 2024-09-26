@@ -54,7 +54,7 @@ namespace AgendaContacto
             try
             {
                 conexion.Open();
-                string query = "SELECT * FROM contactos ORDER BY Id ASC";
+                string query = "SELECT * FROM contactos ORDER BY categoria, apellido";
                 OleDbCommand comando = new OleDbCommand(query, conexion);
                 OleDbDataReader leer = comando.ExecuteReader();
 

@@ -16,6 +16,45 @@ namespace AgendaContacto
         {
             InitializeComponent();
         }
+        private void BuscarContacto_Load(object sender, EventArgs e)
+        {
+            cargarTreeView(); 
+        }
+
+        private void cargarTreeView()
+        {
+            DBConexion db = new DBConexion();
+            List<Dictionary<string, object>> listaContactos = db.obtenerDatos();
+
+            Dictionary<string, TreeNode> categoriasNodos = new Dictionary<string, TreeNode>();
+
+            foreach (var contacto in listaContactos)
+            {
+                string categoria = contacto["categoria"].ToString();
+                string apellido = contacto["apellido"].ToString();
+                string nombre = contacto["nombre"].ToString();
+                string telefono = contacto["telefono"].ToString();
+                string correo = contacto["correo"].ToString();
+
+                if (!categoriasNodos.ContainsKey(categoria))
+                {
+                    TreeNode categoriaNodo = new TreeNode(categoria);
+                    categoriasNodos.Add(categoria, categoriaNodo);
+                    treeViewContactos.Nodes.Add(categoriaNodo);
+                }
+
+                // Crea un nodo para el apellido
+                TreeNode apellidoNodo = new TreeNode(apellido);
+                categoriasNodos[categoria].Nodes.Add(apellidoNodo);
+
+                // Subnodos para nombre, teléfono y correo
+                apellidoNodo.Nodes.Add(new TreeNode("Nombre: " + nombre));
+                apellidoNodo.Nodes.Add(new TreeNode("Teléfono: " + telefono));
+                apellidoNodo.Nodes.Add(new TreeNode("Correo: " + correo));
+
+            }
+
+        }
 
         private void panelSalir_MouseHover(object sender, EventArgs e)
         {
@@ -35,6 +74,7 @@ namespace AgendaContacto
                 formBusquedas.Show();
             }
             this.Close();
-        }
+        }       
+
     }
 }
