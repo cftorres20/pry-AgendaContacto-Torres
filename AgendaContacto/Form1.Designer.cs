@@ -47,6 +47,7 @@
             this.panelGestionContacto.Name = "panelGestionContacto";
             this.panelGestionContacto.Size = new System.Drawing.Size(106, 95);
             this.panelGestionContacto.TabIndex = 0;
+          
             this.panelGestionContacto.MouseClick += new System.Windows.Forms.MouseEventHandler(this.panelGestionContacto_MouseClick);
             this.panelGestionContacto.MouseLeave += new System.EventHandler(this.panelGestionContacto_MouseLeave);
             this.panelGestionContacto.MouseHover += new System.EventHandler(this.panelGestionContacto_MouseHover);

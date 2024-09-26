@@ -63,7 +63,8 @@ namespace AgendaContacto
         }
 
         private void panelGestionContacto_MouseClick(object sender, MouseEventArgs e)
-        {
+        {           
+
             GestionContacto gestionContacto = new GestionContacto();
             gestionContacto.Show(); //.Show() es para interactuar con ambas 
             this.Hide();
@@ -81,5 +82,6 @@ namespace AgendaContacto
         {
 
         }
+       
     }
 }
