@@ -59,7 +59,7 @@
             this.panelVolver.BackColor = System.Drawing.Color.Transparent;
             this.panelVolver.BackgroundImage = global::AgendaContacto.Properties.Resources.atras;
             this.panelVolver.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.panelVolver.Location = new System.Drawing.Point(542, 444);
+            this.panelVolver.Location = new System.Drawing.Point(637, 521);
             this.panelVolver.Name = "panelVolver";
             this.panelVolver.Size = new System.Drawing.Size(50, 46);
             this.panelVolver.TabIndex = 4;
@@ -177,7 +177,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::AgendaContacto.Properties.Resources.notebook_fondo;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(613, 502);
+            this.ClientSize = new System.Drawing.Size(699, 579);
             this.Controls.Add(this.treeViewContactos);
             this.Controls.Add(this.dgvBuscarContacto);
             this.Controls.Add(this.txtDatoBuscado);

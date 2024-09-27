@@ -54,10 +54,11 @@
             this.panelVolver.BackColor = System.Drawing.Color.Transparent;
             this.panelVolver.BackgroundImage = global::AgendaContacto.Properties.Resources.atras;
             this.panelVolver.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.panelVolver.Location = new System.Drawing.Point(541, 444);
+            this.panelVolver.Location = new System.Drawing.Point(592, 494);
             this.panelVolver.Name = "panelVolver";
             this.panelVolver.Size = new System.Drawing.Size(50, 46);
             this.panelVolver.TabIndex = 6;
+            this.panelVolver.MouseClick += new System.Windows.Forms.MouseEventHandler(this.panelVolver_MouseClick);
             // 
             // label1
             // 
@@ -249,7 +250,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = global::AgendaContacto.Properties.Resources.notebook_fondo;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(613, 502);
+            this.ClientSize = new System.Drawing.Size(664, 564);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.textBox4);
@@ -269,6 +270,7 @@
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.panelVolver);
+            this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "GestionContacto";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

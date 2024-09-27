@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -63,10 +64,11 @@ namespace AgendaContacto
         }
 
         private void panelGestionContacto_MouseClick(object sender, MouseEventArgs e)
-        {           
+        {
 
-            GestionContacto gestionContacto = new GestionContacto();
-            gestionContacto.Show(); //.Show() es para interactuar con ambas 
+            Busquedas buscar = new Busquedas();
+            //GestionContacto gestionContacto = new GestionContacto();
+            buscar.Show(); //.Show() es para interactuar con ambas 
             this.Hide();
 
         }
@@ -80,8 +82,34 @@ namespace AgendaContacto
 
         private void panelExportar_MouseClick(object sender, MouseEventArgs e)
         {
+            exportar();
+        }
+
+        private void exportar()
+        {
+            DBConexion db = new DBConexion();
+            Archivo archivo = new Archivo();
+
+            List<Dictionary<string, object>> listaContactos = db.obtenerDatos();
+
+            if (listaContactos.Count == 0)
+            {
+                MessageBox.Show("No hay datos para exportar.");
+                return;
+            }
+
+            Random rand = new Random();
+            int num = rand.Next(0,1000);
+
+            string nombreArchivo = $"contactos{num}.csv";
+            string rutaArchivo = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, nombreArchivo);
+
+            archivo.Exportar(rutaArchivo, listaContactos);
+
+            MessageBox.Show($"Datos exportados exitosamente a {rutaArchivo}", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
         }
-       
+
+
     }
 }
