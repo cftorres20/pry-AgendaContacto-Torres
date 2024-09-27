@@ -38,9 +38,7 @@
             this.rbtEmail = new System.Windows.Forms.RadioButton();
             this.label5 = new System.Windows.Forms.Label();
             this.txtDatoBuscado = new System.Windows.Forms.TextBox();
-            this.dgvBuscarContacto = new System.Windows.Forms.DataGridView();
             this.treeViewContactos = new System.Windows.Forms.TreeView();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvBuscarContacto)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -154,21 +152,12 @@
             this.txtDatoBuscado.Size = new System.Drawing.Size(168, 22);
             this.txtDatoBuscado.TabIndex = 15;
             // 
-            // dgvBuscarContacto
-            // 
-            this.dgvBuscarContacto.BackgroundColor = System.Drawing.Color.Linen;
-            this.dgvBuscarContacto.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvBuscarContacto.Location = new System.Drawing.Point(462, 177);
-            this.dgvBuscarContacto.Name = "dgvBuscarContacto";
-            this.dgvBuscarContacto.Size = new System.Drawing.Size(100, 165);
-            this.dgvBuscarContacto.TabIndex = 16;
-            // 
             // treeViewContactos
             // 
             this.treeViewContactos.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.treeViewContactos.Location = new System.Drawing.Point(105, 224);
+            this.treeViewContactos.Location = new System.Drawing.Point(186, 224);
             this.treeViewContactos.Name = "treeViewContactos";
-            this.treeViewContactos.Size = new System.Drawing.Size(259, 205);
+            this.treeViewContactos.Size = new System.Drawing.Size(343, 205);
             this.treeViewContactos.TabIndex = 17;
             // 
             // BuscarContacto
@@ -179,7 +168,6 @@
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(699, 579);
             this.Controls.Add(this.treeViewContactos);
-            this.Controls.Add(this.dgvBuscarContacto);
             this.Controls.Add(this.txtDatoBuscado);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.rbtEmail);
@@ -196,7 +184,6 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "BuscarContacto";
             this.Load += new System.EventHandler(this.BuscarContacto_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dgvBuscarContacto)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -214,7 +201,6 @@
         private System.Windows.Forms.RadioButton rbtEmail;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox txtDatoBuscado;
-        private System.Windows.Forms.DataGridView dgvBuscarContacto;
         private System.Windows.Forms.TreeView treeViewContactos;
     }
 }

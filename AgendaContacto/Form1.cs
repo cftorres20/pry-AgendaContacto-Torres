@@ -66,9 +66,9 @@ namespace AgendaContacto
         private void panelGestionContacto_MouseClick(object sender, MouseEventArgs e)
         {
 
-            Busquedas buscar = new Busquedas();
-            //GestionContacto gestionContacto = new GestionContacto();
-            buscar.Show(); //.Show() es para interactuar con ambas 
+            //Busquedas buscar = new Busquedas();
+            GestionContacto gestionContacto = new GestionContacto();
+            gestionContacto.Show(); //.Show() es para interactuar con ambas 
             this.Hide();
 
         }

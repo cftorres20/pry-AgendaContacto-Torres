@@ -19,10 +19,11 @@ namespace AgendaContacto
 
         private void panelVolver_MouseClick(object sender, MouseEventArgs e)
         {
-            Busquedas formBusquedas = Application.OpenForms["Busquedas"] as Busquedas;
-            if (formBusquedas != null)
+            Form1 form1 = Application.OpenForms["Form1"] as Form1;
+
+            if (form1 != null)
             {
-                formBusquedas.Show();
+                form1.Show();
             }
             this.Close();
         }
